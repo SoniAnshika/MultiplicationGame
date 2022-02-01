@@ -6,7 +6,7 @@ using namespace std;
 
        /*function to produce new questions for the student using srand and rand . */
        void newque(int &m,int &n,int &flag)
-        {    
+        {
               if(flag==1)
               {
              m=rand()%10;
@@ -32,7 +32,7 @@ using namespace std;
 
           //to store the percentage of the student in each level.
            double  per=0.0 ;
-
+          cout<<"WELCOME TO THE WORLD OF DIGIT MULTIPLICATION IN MATHEMATICS!!"<<endl;
           srand(time(NULL));
           //labeling the point to use the goto statement.
           again :
@@ -48,13 +48,13 @@ using namespace std;
           {
               r=r+1;
              remarks(c);
-            /*choosing the random remark among the following. */ 
+            /*choosing the random remark among the following. */
             switch(c)
             {
                case 1 :
                cout<<"   Very    good  !\n "<<endl;
                break;
- 
+
               case 2 :
               cout<<"   Excellent  !  \n "<<endl;
               break;
@@ -62,18 +62,18 @@ using namespace std;
               case 3:
               cout<<"   Nice   Work  !\n  "<<endl;
               break;
- 
+
               case 4:
               cout<<"   keep  up  the  good    work  ! \n  "<<endl;
               break;
 
              default:
              cout<<"Never  executed  "<<endl;
-          }  
+          }
 
            /*if the frequency of the answers is equal to 10 the calculating the percentage of the student in the current level. */
            if((r+w)==10)
-           {  
+           {
               mark :
               per=(r*10);
              /* If the percentage of the student in this level is greater than equal to 75 percent than promote the student to the next level. */
@@ -82,7 +82,7 @@ using namespace std;
                   cout<<"\nCongratulations,  you   are    ready    to    go    to    the     next     level  !  "<<endl ;
                   cout<<"Your  Percentage  in  this  level  is  "<<per<<" % "<<endl ;
                   cout<<endl ;
-                  cout<<"\nWELCOME TO THE NEXT LEVEL :) "<<endl ;  
+                  cout<<"\nWELCOME TO THE NEXT LEVEL :) "<<endl ;
                   /*Promoting the flag to design the new question for the student. */
                   flag=flag*10 ;
                  /*Framing the new level for the student. */
@@ -92,7 +92,7 @@ using namespace std;
                   per=0.0;
               }
              else
-              {     
+              {
                   cout<<"Please, Ask your teacher for help. "<<endl;
                   cout<<"As your percentage i.e "<<per<<"is less than 75 %. So, you should play this level again under the guidance of your teacher for your better performance."<<endl;
                   cout<<".................................ALL    THE   BEST....................................."<<endl ;
@@ -106,13 +106,13 @@ using namespace std;
            /*If student has entered the wrong answer then providing his/her the chances untill and unless he/she writes the right answer. */
             w=w+1;
             remarks(c);
-           /*choosing the random remark among the following. */ 
+           /*choosing the random remark among the following. */
            switch(c)
          {
                case 1 :
                cout<<"   No.  Please   Try   again.\n"<<endl;
                break;
- 
+
               case 2 :
               cout<<"   Wrong.  Try   once   more.\n "<<endl;
               break;
@@ -120,14 +120,14 @@ using namespace std;
               case 3:
               cout<<"   Don't  give   up !  \n"<<endl;
               break;
- 
+
               case 4:
               cout<<"  No.  Keep   trying. \n "<<endl;
               break;
 
              default:
              cout<<"Never  executed  "<<endl;
-         }  
+         }
               if((r+w)==10)
               {
                  goto mark;
